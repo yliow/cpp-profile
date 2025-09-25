@@ -1,0 +1,19 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 457  of event 'cpu-clock:uhpppH'
+# Event count (approx.): 114250000
+#
+# Overhead  Command   Shared Object  Symbol                                                
+# ........  ........  .............  ......................................................
+#
+    51.64%  main.exe  main.exe       [.] bubblesort
+    34.14%  main.exe  main.exe       [.] std::vector<int, std::allocator<int> >::operator[]
+    14.22%  main.exe  main.exe       [.] swap
+
+
+#
+# (Tip: To record callchains for each sample: perf record -g)
+#

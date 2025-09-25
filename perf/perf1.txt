@@ -1,0 +1,23 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 76K of event 'cpu-clock:uhpppH'
+# Event count (approx.): 19107750000
+#
+# Overhead  Command   Shared Object        Symbol                                                                  
+# ........  ........  ...................  ........................................................................
+#
+    51.01%  main.exe  main.exe             [.] bubblesort
+    32.57%  main.exe  main.exe             [.] std::vector<int, std::allocator<int> >::operator[]
+    16.41%  main.exe  main.exe             [.] swap
+     0.00%  main.exe  ld-2.30.so           [.] _dl_relocate_object
+     0.00%  main.exe  libc-2.30.so         [.] __random
+     0.00%  main.exe  libstdc++.so.6.0.28  [.] 0x000000000009c6b0
+     0.00%  main.exe  main.exe             [.] __gnu_cxx::operator!=<int*, std::vector<int, std::allocator<int> > >
+
+
+#
+# (Tip: To report cacheline events from previous recording: perf c2c report)
+#

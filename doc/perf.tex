@@ -1,0 +1,27 @@
+\section{perf}
+
+To install perf, as root, do
+\begin{console}[fontsize=\footnotesize]
+dnf install -y perf
+\end{console}
+
+Create a directory \verb!perf/! and write the following file
+in \verb!perf/!:
+\VerbatimInput[fontsize=\footnotesize,frame=single]{../perf/main.cpp}
+Compile it using \gpp.
+Then run perf:
+\begin{console}[fontsize=\footnotesize]
+perf record ./main.exe
+\end{console}
+You might get an output something like this:
+\begin{console}[fontsize=\footnotesize]
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0.027 MB perf.data (457 samples) ]
+\end{console}
+You'll also get the file \verb!perf.data!.
+Run
+\begin{console}[fontsize=\footnotesize]
+perf report --stdio > perf.txt
+\end{console}
+Here's my \verb!perf.txt!:
+\VerbatimInput[fontsize=\scriptsize,frame=single]{../perf/perf0.txt}

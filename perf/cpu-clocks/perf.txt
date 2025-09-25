@@ -1,0 +1,35 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 99K of event 'cpu-clock:u'
+# Event count (approx.): 24956250000
+#
+# Overhead  Command   Shared Object        Symbol                                                                               
+# ........  ........  ...................  .....................................................................................
+#
+    50.77%  main.exe  main.exe             [.] bubblesort
+    33.02%  main.exe  main.exe             [.] std::vector<int, std::allocator<int> >::operator[]
+    16.21%  main.exe  main.exe             [.] swap
+     0.00%  main.exe  ld-2.30.so           [.] do_lookup_x
+     0.00%  main.exe  libstdc++.so.6.0.28  [.] std::ios_base::Init::~Init
+     0.00%  main.exe  main.exe             [.] __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::base
+
+
+# Samples: 6  of event 'faults:u'
+# Event count (approx.): 6194
+#
+# Overhead  Command   Shared Object  Symbol                                       
+# ........  ........  .............  .............................................
+#
+    96.88%  main.exe  main.exe       [.] std::__fill_n_a<int*, unsigned long, int>
+     2.91%  main.exe  ld-2.30.so     [.] _dl_cache_libcmp
+     0.16%  main.exe  ld-2.30.so     [.] _dl_sysdep_start
+     0.03%  main.exe  ld-2.30.so     [.] _dl_start
+     0.02%  main.exe  ld-2.30.so     [.] _start
+
+
+#
+# (Tip: System-wide collection from all CPUs: perf record -a)
+#
